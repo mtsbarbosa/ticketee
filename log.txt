@@ -1,9 +1,0 @@
-.
-
-2 deprecation warnings total
-
-Finished in 0.28511 seconds
-1 example, 0 failures
-
-Randomized with seed 6891
-
