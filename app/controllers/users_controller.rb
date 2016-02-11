@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
-  		flash[:notice] = "You have signed up successfully."
+  		flash[:notice] = I18n.t("users._sign_up_success")
   		redirect_to projects_path
   	else
   		render :new
@@ -25,10 +25,10 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:notice] = "Profile has been updated."
+      flash[:notice] = I18n.t("users._entity_updated_success")
       redirect_to @user
     else
-      flash[:alert] = "Profile has not been updated."
+      flash[:alert] = I18n.t("users._entity_updated_fail")
       render "edit"
     end
   end

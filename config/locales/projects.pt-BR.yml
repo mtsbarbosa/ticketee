@@ -1,0 +1,19 @@
+pt-BR:
+   project:
+     name: Nome
+     description: Descricao
+   projects:
+     _entity_pluralized: Projetos
+     _prohibited_entity_saved: proibiu este projeto de ser salvo
+     _new_entity: Novo Projeto
+     _update_entity: Atualizar Projeto
+     _edit_entity: Editar Projeto
+     _create_entity: Criar Projeto
+     _delete_entity: Apagar Projeto
+     _create_entity_success: Projeto foi criado.
+     _create_entity_fail: Projeto nao foi criado.
+     _update_entity_success: Projeto foi atualizado.
+     _update_entity_fail: Projeto nao foi atualizado.
+     _delete_entity_success: Projeto foi destruido.
+     _delete_entity_message_confirm: Tem certeza que quer destruir este projeto?
+     _entity_looking_not_found: O projeto que procura nao foi encontrado.

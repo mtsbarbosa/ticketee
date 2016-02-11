@@ -1,7 +1,7 @@
-<h2>Projects</h2>
+<h2><%= t("projects._entity_pluralized") %></h2>
 <ul>
 	<% @projects.each do |project| %>
 		<li><%= link_to project.name, project %></li>
 	<% end %>
 </ul>
-<%= link_to "New Project", new_project_path %>
+<%= link_to I18n.t("projects._new_entity"), new_project_path %>

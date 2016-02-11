@@ -7,11 +7,11 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:signin][:password])
 			session[:user_id] = user.id
-			flash[:notice] = "Signed in successfully."
+			flash[:notice] = I18n.t("users._sign_in_success")
 			
 			redirect_to root_url
 		else
-			flash[:error] = "Sorry."
+			flash[:error] = I18n.t("users._sign_in_fail")
 			render :new
 		end
 	end

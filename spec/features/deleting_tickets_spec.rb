@@ -14,9 +14,9 @@ feature 'Deleting tickets' do
 	end
 
 	scenario "Deleting a ticket" do
-		click_link "Delete Ticket"
+		click_link I18n.t("tickets._delete_entity")
 
-		expect(page).to have_content("Ticket has been deleted.")
+		expect(page).to have_content(I18n.t("tickets._delete_entity_success"))
 		expect(page.current_url).to eq(project_url(project))
 	end
 end

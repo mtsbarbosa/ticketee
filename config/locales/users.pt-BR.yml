@@ -1,0 +1,20 @@
+pt-BR:
+   user:
+     name: Nome
+     password: Senha
+     password_confirmation: Confirmaçao de Senha
+     email: Email
+   users:
+     _sign_in: Entrar
+     _sign_up: Cadastrar-se
+     _sign_up_success: Voce cadastrou-se.
+     _sign_in_success: Entrou.
+     _sign_in_fail: Desculpe-nos.
+     _update_entity: Atualizar Perfil
+     _edit_entity: Editar Perfil
+     _entity: Perfil
+     _entity_username: Nome do usuario
+     _entity_email: Email
+     _entity_updated_success: O Perfil foi atualizado.
+     _entity_updated_success: O Perfil nao foi atualizado.
+     _prohibited_entity_saved: proibiu este usuario de ser salvo

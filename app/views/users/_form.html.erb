@@ -2,7 +2,7 @@
 	<% if @user.errors.any? %>
 		<div id="error_explanation">
 			<h2><%= pluralize(@user.errors.count, "error") %>
-				prohibited this user from being saved:</h2>
+				<%= t "users._prohibited_entity_saved" %>:</h2>
 
 			<ul>
 				<% @user.errors.full_messages.each do |msg| %>
@@ -13,7 +13,7 @@
 	<% end %>
 
 	<p>
-		<%= f.label :name, "Username" %><br>
+		<%= f.label :name %><br>
 		<%= f.text_field :name %>
 	</p>
 	<p>
@@ -29,8 +29,8 @@
 		<%= f.password_field :password_confirmation %>
 	</p>
 	<% if @user.new_record? %>
-		<%= f.submit "Sign up" %>
+		<%= f.submit I18n.t("users._sign_up") %>
 	<% else %>
-		<%= f.submit "Update Profile" %>
+		<%= f.submit I18n.t("users._update_entity") %>
 	<% end %>
 <% end %>

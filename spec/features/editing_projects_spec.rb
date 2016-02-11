@@ -5,20 +5,20 @@ feature "Editing Projects" do
 
 		visit "/"
 		click_link "TextMate 2"
-		click_link "Edit Project"
+		click_link I18n.t("projects._edit_entity")
 	end
 
 	scenario "Updating a project" do
-		fill_in "Name", with: "TextMate 2 beta"
-		click_button "Update Project"
+		fill_in "project_name", with: "TextMate 2 beta"
+		click_button I18n.t("projects._update_entity")
 
-		expect(page).to have_content("Project has been updated.")
+		expect(page).to have_content(I18n.t("projects._update_entity_success"))
 	end
 
 	scenario "Updating a project with invalid attributes is bad" do
-		fill_in "Name", with: ""
-		click_button "Update Project"
+		fill_in "project_name", with: ""
+		click_button I18n.t("projects._update_entity")
 
-		expect(page).to have_content("Project has not been updated.")
+		expect(page).to have_content(I18n.t("projects._update_entity_fail"))
 	end
 end

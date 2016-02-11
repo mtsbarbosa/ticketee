@@ -1,0 +1,19 @@
+pt-BR:
+   ticket:
+     title: Titulo
+     description: Descricao
+   tickets:		
+     _prohibited_ticket_saved: proibiu este ticket de ser salvo
+     _new_entity: Novo Ticket
+     _update_entity: Atualizar Ticket
+     _edit_entity: Editar Ticket
+     _create_entity: Criar Ticket
+     _delete_entity: Apagar Ticket
+     _create_entity_success: Ticket foi criado.
+     _create_entity_fail: Ticket nao foi criado.
+     _update_entity_success: Ticket foi atualizado.
+     _update_entity_fail: Ticket nao foi atualizado.
+     _delete_entity_success: Ticket foi apagado.
+     _delete_entity_message_confirm: Tem certeza que deseja apagar este ticket?
+     _editing_entity_in: Editando um ticket no
+     _created_by: Criado por 

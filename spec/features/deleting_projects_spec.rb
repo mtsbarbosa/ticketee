@@ -6,9 +6,9 @@ feature "Deleting projects" do
 
 		visit "/"
 		click_link "TextMate 2"
-		click_link "Delete Project"
+		click_link I18n.t("projects._delete_entity")
 
-		expect(page).to have_content("Project has been destroyed.")
+		expect(page).to have_content(I18n.t("projects._delete_entity_success"))
 
 		visit "/"
 

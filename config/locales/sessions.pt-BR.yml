@@ -1,0 +1,7 @@
+pt-BR:
+   sessions:
+     _sign_in: Entrar
+     _sign_up: Cadastrar-se
+     _need_sign_before: Voce precisa entrar ou se cadastrar antes.
+     _sign_in_success: Entrou.
+     _sign_up_success: Voce cadastrou-se.

@@ -11,14 +11,14 @@ feature "Editing tickets" do
 		visit '/'
 		click_link project.name
 		click_link ticket.title
-		click_link "Edit Ticket"
+		click_link I18n.t("tickets._edit_entity")
 	end
 
 	scenario "Updating a ticket" do
-		fill_in "Title", with: "Make it really shiny!"
-		click_button "Update Ticket"
+		fill_in "ticket_title", with: "Make it really shiny!"
+		click_button I18n.t("tickets._update_entity")
 
-		expect(page).to have_content("Ticket has been updated.")
+		expect(page).to have_content(I18n.t("tickets._update_entity_success"))
 
 		within("#ticket h2") do
 			expect(page).to have_content("Make it really shiny!")
@@ -28,9 +28,9 @@ feature "Editing tickets" do
 	end
 
 	scenario "Updating a ticket with invalid information" do
-		fill_in "Title", with: ""
-		click_button "Update Ticket"
+		fill_in "ticket_title", with: ""
+		click_button I18n.t("tickets._update_entity")
 
-		expect(page).to have_content("Ticket has not been updated.")
+		expect(page).to have_content(I18n.t("tickets._update_entity_fail"))
 	end
 end

@@ -1,4 +1,4 @@
-<h1>Profile</h1>
-<p><b>Username</b>: <%= @user.name %></p><br>
-<p><b>Email</b>: <%= @user.email %></p><br>
-<%= link_to "Edit Profile", edit_user_path(@user) %>
+<h1><%= t "users._entity" %></h1>
+<p><b><%= t "users._entity_username" %></b>: <%= @user.name %></p><br>
+<p><b><%= t "users._entity_email" %></b>: <%= @user.email %></p><br>
+<%= link_to I18n.t("users._edit_entity"), edit_user_path(@user) %>

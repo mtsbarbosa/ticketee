@@ -16,11 +16,11 @@ feature "Editing Users" do
 		user = FactoryGirl.create(:user)
 
 		visit user_path(user)
-		click_link "Edit Profile"
+		click_link I18n.t("users._edit_entity")
 
-		fill_in "Username", with: "new_username"
-		click_button "Update Profile"
+		fill_in "user_name", with: "new_username"
+		click_button I18n.t("users._update_entity")
 
-		expect(page).to have_content("Profile has been updated.")
+		expect(page).to have_content(I18n.t("users._entity_updated_success"))
 	end
 end

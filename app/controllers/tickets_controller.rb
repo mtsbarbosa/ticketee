@@ -11,10 +11,10 @@ class TicketsController < ApplicationController
 		@ticket = @project.tickets.build(ticket_params)
 		@ticket.user = current_user
 		if(@ticket.save)
-			flash[:notice] = "Ticket has been created."
+			flash[:notice] = I18n.t("tickets._create_entity_success")
 			redirect_to [@project, @ticket]
 		else
-			flash[:alert] = "Ticket has not been created."
+			flash[:alert] = I18n.t("tickets._create_entity_fail")
 			render "new"
 		end
 	end
@@ -24,17 +24,17 @@ class TicketsController < ApplicationController
 
 	def update
 		if(@ticket.update(ticket_params))
-			flash[:notice] = "Ticket has been updated."
+			flash[:notice] = I18n.t("tickets._update_entity_success")
 			redirect_to [@project, @ticket]
 		else
-			flash[:alert] = "Ticket has not been updated."
+			flash[:alert] = I18n.t("tickets._update_entity_fail")
 			render action: "edit"
 		end
 	end
 
 	def destroy
 		@ticket.destroy
-		flash[:notice] = "Ticket has been deleted."
+		flash[:notice] = I18n.t("tickets._delete_entity_success")
 
 		redirect_to @project
 	end

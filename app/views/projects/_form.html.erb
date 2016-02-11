@@ -3,7 +3,7 @@
 		<div id="error_explanation">
 			<h2>
 				<%= pluralize(@project.errors.count, "error") %>
-				prohibited this project form being saved:
+				<%= t "projects._prohibited_entity_saved" %>:
 			</h2>
 			<ul>
 				<% @project.errors.full_messages.each do |msg| %>
@@ -21,9 +21,9 @@
 		<%= f.label :description %><br />
 		<%= f.text_field :description %>
 		<% if @project.id %> 
-			<%= f.submit "Update Project" %>
+			<%= f.submit I18n.t("projects._update_entity") %>
 		<% else %>
-			<%= f.submit "Create Project" %>
+			<%= f.submit I18n.t("projects._create_entity") %>
 		<% end %>
 	</p>
 <% end %>
